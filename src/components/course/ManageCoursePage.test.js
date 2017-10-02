@@ -9,7 +9,7 @@ describe ('Manage Course Page', () => {
            actions: { saveCourse: () => {return Promise.resolve(); }},
            authors: [],
            course: {id: '', title: '', authorId: '', length: '', category: ''}
-       }
+       };
        const wrapper = mount(<ManageCoursePage {...props}/>);
        const saveButton = wrapper.find('input').last();
        expect(saveButton.prop('type')).toBe('submit');
